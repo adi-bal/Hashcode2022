@@ -13,6 +13,8 @@ class project:
         self.bbefore = bbefore
         self.nroles = nroles
         self.skills = skills
+    def show(self):
+        print("{} {} {} {} {} {}".format(self.name, self.days, self.score, self.bbefore, self.nroles, self.skills ))
 contributer_list = list()
 projects_list = list() 
 
@@ -42,25 +44,19 @@ while(contributers):
     new_contributer = contributer(name, skills)
     contributer_list.append(new_contributer)
     contributers -=1
-"""        
+
+
 while(projects):
     name = input[i][0]
-    i += 1
-    days = input[i][0]
-    i += 1
-    score  = input[i][0]
-    i += 1
-    bbefore = input[i][0]
-    i += 1
-    nroles = int(input[i][0])
+    days = int(input[i][1])
+    score  = int(input[i][2])
+    bbefore = int(input[i][3])
+    nroles = int(input[i][4])
     i += 1
     skills = dict()
     for _ in range(nroles):
         skills[input[i][0]] = input[i][1]
         i +=1
     new_project = project(name, days, score, bbefore, nroles, skills)
-    projects_list.append(new_project)    
-"""
-
-for c in contributer_list:
-    c.show()
+    projects_list.append(new_project)
+    projects -=1    
